@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="style.css">
+
+    <!---------Fonts--------->
+    <!--h3 p a font-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+    <!--h2 font-->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:800" rel="stylesheet">
+
+    <!--footer h1 font-->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">
+
+
+    <!--icon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon_url-baren16x16.png">
+    <link rel="manifest" href="myicons/site.webmanifest">
+    <link rel="mask-icon" href="myicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="myicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="myicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Sille Agerskov Forside</title>
+
+</head>
+
+<body>
+
+    <header>
+
+        <!-------------MENU----------------->
+        <!---desktop menu---->
+        <div class="siteheader">
+
+            <a href="index.html">
+                <img src="Billeder/sille-agerskov-design-logo.png" alt="logo"> </a>
+
+
+            <nav>
+                <div class="dropdowndesktop">
+                    <a href="portfolio.html" class="portfolie"> PORTFOLIE </a>
+
+                    <div class="dropdown-contentdesktop">
+                        <a href="portfolio.html#postmodernisme">- TEMA 1</a>
+                        <a href="portfolio.html#video">- TEMA 2</a>
+                        <a href="portfolio.html#bibliotekaren">- TEMA 3</a>
+                        <a href="portfolio.html#prototype">- TEMA 4</a>
+                    </div>
+                </div>
+                <a href="om.html">OM</a>
+                <a href="kontakt.html">KONTAKT</a>
+            </nav>
+
+        </div>
+
+
+        <!---mobil menu burger---->
+
+        <div class="mobilenav">
+            <a href="index.html">
+                <img src="Billeder/sille-agerskov-design-logo.png" alt="logo"> </a>
+
+            <nav>
+                <div id="menuknap">☰</div>
+                <ul id="menu" class="hidden">
+                    <li><a href="portfolio.html">PORTFOLIE</a></li>
+                    <li> <a href="portfolio.html#postmodernisme">- TEMA 1</a></li>
+                    <li> <a href="portfolio.html#video">- TEMA 2</a></li>
+                    <li> <a href="portfolio.html#bibliotekaren">- TEMA 3</a></li>
+                    <li><a href="portfolio.html#prototype">- TEMA 4</a></li>
+                    <li> <a href="om.html">OM</a></li>
+                    <li><a href="kontakt.html">KONTAKT</a></li>
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+
+
+    <section id="splash">
+
+        <picture>
+            <source media="(min-width: 1130px)" srcset="Billeder/portratforside_desctop_stor">
+            <source media="(min-width: 930px)" srcset="Billeder/portratforside_desctop_lille">
+            <source media="(min-width: 460px)" srcset="Billeder/portratforside_ipad">
+            <!--            <source media="(min-width: 300px)" srcset="Billeder/portratforside_mobile">-->
+            <img src="Billeder/portratforside_mobile" alt="forside sille portraet">
+        </picture>
+
+    </section>
+
+    <script src="script.js"></script>
+
+    <footer>Multimediedesinger 1. sem. - KEA - ©Sille Agerskov </footer>
+
+</body>
+
+</html>

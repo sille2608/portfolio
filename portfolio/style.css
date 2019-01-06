@@ -1,0 +1,1003 @@
+/****************GENERELT UDSEENDE********************/
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+header {
+    position: absolute;
+    width: 100%;
+}
+
+body {
+    margin: 0.1px;
+    padding: 0;
+    line-height: 0;
+
+}
+
+footer {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    background-color: #8e8c8c;
+    font-size: 0.8rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    color: white;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    line-height: 20px;
+}
+
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.9rem;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+
+}
+
+h2 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
+}
+
+/*******************MENUBAR********************/
+
+
+.hidden {
+    transform: scale(0);
+}
+
+#menuknap {
+    position: relative;
+    display: inline-block;
+    width: 3rem;
+    font-size: 3rem;
+    font-family: Montserrat;
+    color: white;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+}
+
+#menu {
+    list-style-type: none;
+    transition: transform 1s;
+    transform-origin: top right;
+    position: absolute;
+    background-color: #aaaaaa;
+    min-width: 170px;
+    z-index: 1;
+    right: 1rem;
+    top: 1.9rem;
+}
+
+#menu a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
+    line-height: 3rem;
+}
+
+
+.siteheader {
+    display: none;
+}
+
+
+header img {
+    max-width: 50%;
+    margin-left: 1rem;
+    display: block;
+}
+
+.mobilenav {
+    width: 100%;
+    background-color: #c9c9c9;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+}
+
+header {
+    width: 100%;
+    display: inline;
+    position: fixed;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+/*****MENU BAR TABLET*****/
+
+@media only screen and (min-width:400px) {
+    header img {
+        max-width: 12rem;
+        margin-left: 2rem;
+    }
+}
+
+/******MENU BAR DESCTOP******/
+
+@media only screen and (min-width: 945px) {
+    .mobilenav {
+        display: none;
+    }
+
+    .dropdowndesktop {
+        float: left;
+        overflow: hidden;
+    }
+
+    .dropdowndesktop .portfolie {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 22px;
+        color: white;
+        padding-right: 1rem;
+        text-align: right;
+        border: none;
+        outline: none;
+        margin: 0;
+        content: "\u2261";
+        line-height: 1.2rem;
+        background-color: #c9c9c9;
+    }
+
+    header .portfolie {
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .dropdown-contentdesktop {
+        display: none;
+        position: absolute;
+        background-color: darkgray;
+        min-width: 140px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .dropdown-contentdesktop a {
+        padding: 7px 10px;
+        font-weight: 400;
+        display: block;
+        text-align: left;
+        color: white;
+    }
+
+    .dropdown-contentdesktop a:hover {
+        background-color: lightgrey;
+    }
+
+    .dropdowndesktop:hover .dropdown-contentdesktop {
+        display: block;
+    }
+
+    header {
+        width: 100%;
+        display: inline;
+        position: fixed;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+    }
+
+    header .siteheader {
+        height: 60px;
+        width: 100%;
+        background-color: #c9c9c9;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        line-height: 1.2rem;
+    }
+
+    .siteheader a:hover {
+        color: black;
+    }
+
+    header .portfolie:hover {
+        color: black;
+    }
+
+    /*ingen streg under links*/
+    header nav a {
+        text-decoration: none;
+        padding-right: 1rem;
+    }
+
+    header a {
+        line-height: 1.2rem;
+        font-size: 22px;
+    }
+
+    header img {
+        max-width: 15rem;
+        margin-left: 3rem;
+    }
+
+    .siteheader nav {
+        margin-right: 2.5rem;
+    }
+
+}
+
+
+/*************PORTFOLIE*****************/
+
+/****bokse**/
+
+#portfolie {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-top: 2.5rem;
+}
+
+#portfolie h1 {
+    padding-bottom: 0.3rem;
+    margin: 0;
+}
+
+#portfolie h2 {
+    padding: 0;
+}
+
+#portfolie .column_small {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex-basis: 200px;
+    flex-grow: 1;
+    width: 100%;
+}
+
+
+#portfolie .column_small_1 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex-grow: 0;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+#portfolie .column_small_2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 120px;
+    width: 100%;
+    position: relative;
+}
+
+#video .column_small_2 {
+    flex-basis: 70px;
+    position: relative;
+    padding-top: 0.5rem;
+}
+
+#prototype .column_small_2 {
+    flex-basis: 200px;
+    position: relative;
+    padding-top: 0.5rem;
+}
+
+#portfolie .column_big {
+    flex-grow: 2;
+    flex-basis: 200px;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+#portfolie .column_big_img {
+    flex-basis: 200px;
+    flex-grow: 1;
+}
+
+/****knapper****/
+
+#portfolie .resultat_knap {
+    width: 18rem;
+    height: 3rem;
+    border-radius: 0.8rem;
+    text-align: center;
+    margin: auto;
+    padding: 0.6rem;
+}
+
+#postmodernisme .resultat_knap {
+    background-color: palevioletred;
+}
+
+#video .resultat_knap {
+    background-color: #3a80af;
+}
+
+#redesign .resultat_knap {
+    background-color: #2c2c2c;
+}
+
+#bibliotekaren .resultat_knap {
+    background-color: #20995a;
+}
+
+#sexogsamfund .resultat_knap {
+    background-color: #e4912e;
+}
+
+#prototype .resultat_knap {
+    background-color: #ef928a;
+}
+
+#prototype .resultat_knap_2 {
+    background-color: #ea847c;
+    margin-top: 1rem;
+}
+
+#prototype .resultat_knap_3 {
+    background-color: #6a596b;
+    margin-top: 1rem;
+}
+
+
+#portfolie .dokumentation_knap {
+    width: 18rem;
+    height: 3rem;
+    border-radius: 0.8rem;
+    text-align: center;
+    margin: auto;
+    padding: 0.6rem;
+    margin-top: 1rem;
+}
+
+#postmodernisme .dokumentation_knap {
+    background-color: #e391b1;
+}
+
+#redesign .dokumentation_knap {
+    background-color: #626161;
+}
+
+#prototype .dokumentation_knap {
+    background-color: #4e4150;
+}
+
+#bibliotekaren .dokumentation_knap {
+    background-color: #2d877d;
+}
+
+#sexogsamfund .dokumentation_knap {
+    background-color: #d7721b;
+}
+
+/****baggrundsfladerne**/
+
+.allprojects {
+    width: 100%;
+    padding: 1rem;
+    padding-top: 3rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+#postmodernisme {
+    background-color: #ededed;
+    height: 56em;
+}
+
+#video {
+    background-color: #c7c7c7;
+    height: 49rem;
+}
+
+#redesign {
+    background-color: #dcdcdc;
+    height: 58rem;
+}
+
+#bibliotekaren {
+    background-color: #bcbcbc;
+    height: 57rem;
+}
+
+#sexogsamfund {
+    background-color: #959595;
+    height: 61rem;
+}
+
+#prototype {
+    background-color: #b9b9b9;
+    height: 82rem;
+}
+
+/****overlay - tekst beskrivelser**/
+
+.overlay {
+    height: 50%;
+    width: 100%;
+    opacity: 1;
+}
+
+.text_overlay {
+    color: white;
+    font-size: 9px;
+    text-align: left;
+    line-height: 2rem;
+    border: none;
+    width: 100%;
+    padding: 0.5rem 1.2rem 0.5rem 1.2rem;
+}
+
+#postmodernisme .overlay {
+    background-color: #e391b1;
+    margin-top: 2rem;
+    height: 22rem;
+}
+
+#video .overlay {
+    background-color: #3a80af;
+    margin-top: 2rem;
+    height: 17rem;
+}
+
+#redesign .overlay {
+    background-color: #626161;
+    margin-top: 2rem;
+    height: 24rem;
+}
+
+#bibliotekaren .overlay {
+    background-color: #2d877d;
+    margin-top: 2rem;
+    height: 21rem;
+}
+
+#sexogsamfund .overlay {
+    background-color: #d7721b;
+    margin-top: 2rem;
+    height: 25.3rem;
+}
+
+#prototype .overlay {
+    background-color: #4e4150;
+    margin-top: 2rem;
+    height: 35rem;
+}
+
+
+/*********PORTFOLIE tablet***********/
+
+@media only screen and (min-width: 520px) {
+
+    #sexogsamfund,
+    #video {
+        height: 26rem;
+    }
+
+    #bibliotekaren {
+        height: 27rem;
+    }
+
+    #postmodernisme {
+        padding-top: 3rem;
+        height: 27rem;
+    }
+
+    #redesign {
+        height: 27rem;
+    }
+
+    #prototype {
+        height: 34rem;
+    }
+
+
+    /***portfolie overlay tablet**/
+
+    .column_big img {
+        padding-top: 5rem;
+        padding-left: 2rem;
+    }
+
+    #prototype .column_big img {
+        padding-top: 7.3rem;
+    }
+
+
+    #portfolie .column_big {
+        position: relative;
+    }
+
+    #portfolie .image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    #portfolie .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+    }
+
+    .text_overlay {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 9rem;
+        left: 13rem;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: left;
+        line-height: 2rem;
+        border: none;
+        width: 100%;
+        margin: 1rem 0.5rem 1rem 0.5rem;
+    }
+
+    #portfolie .column_big:hover .overlay {
+        opacity: 1;
+    }
+
+
+    #postmodernisme .overlay {
+        background-color: #e391b1;
+        height: 20rem;
+        top: -3rem;
+    }
+
+    #video .overlay {
+        background-color: #3a80af;
+        height: 19rem;
+        top: -2rem;
+    }
+
+    #video .text_overlay {
+        margin-top: 0rem;
+    }
+
+    #redesign .overlay {
+        background-color: #626161;
+        height: 20rem;
+        top: -3rem;
+    }
+
+    #bibliotekaren .overlay {
+        background-color: #2d877d;
+        height: 21rem;
+        top: -3rem;
+    }
+
+    #sexogsamfund .overlay {
+        background-color: #d7721b;
+        height: 20rem;
+        top: -3rem;
+    }
+
+    #prototype .overlay {
+        background-color: #4e4150;
+        height: 27rem;
+        top: -3rem;
+    }
+
+    #prototype .text_overlay {
+        margin-top: 4.8rem;
+    }
+
+}
+
+
+/*********PORTFOLIE desctop**************/
+
+@media only screen and (min-width: 800px) {
+
+    #portfolie p {
+        font-size: 1.1rem;
+    }
+
+    #video,
+    #postmodernisme,
+    #redesign,
+    #bibliotekaren,
+    #sexogsamfund,
+    #prototype {
+        padding: 3rem;
+
+    }
+
+    #postmodernisme {
+        padding-top: 4rem;
+        height: 35rem;
+    }
+
+    .column_big {
+        padding-top: 1rem;
+    }
+
+    #portfolie .resultat_knap,
+    #prototype .resultat_knap_2,
+    #prototype .resultat_knap_3,
+    #portfolie .dokumentation_knap {
+        margin: 0;
+        margin-top: 1rem;
+    }
+
+
+    #portfolie .column_small_1 {
+        flex-grow: 0;
+        margin-bottom: 2.5rem;
+    }
+
+    #prototype .column_big img {
+        padding-top: 4rem;
+        padding-left: 4rem;
+    }
+
+    #video,
+    #bibliotekaren,
+    #sexogsamfund {
+        height: 36rem;
+    }
+
+    #redesign {
+        height: 34rem;
+    }
+
+    #prototype {
+        height: 40rem;
+    }
+
+
+    #portfolie .column_small {
+        padding-top: 2rem;
+    }
+
+
+    /***portfolie overlay desctop**/
+
+    .column_big img {
+        padding-top: 1rem;
+        padding-left: 2rem;
+    }
+
+    #prototype .column_big img {
+        padding-top: 3rem;
+    }
+
+
+    #portfolie .column_big {
+        position: relative;
+    }
+
+    #portfolie .image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+    }
+
+    .text_overlay {
+        color: white;
+        font-size: 30px;
+        position: absolute;
+        top: 9rem;
+        left: 22rem;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: left;
+        line-height: 4rem;
+        border: none;
+        width: 100%;
+        margin: 1rem 0.5rem 1rem 0.5rem;
+    }
+
+    .column_big:hover .overlay {
+        opacity: 1;
+    }
+
+
+    #postmodernisme .overlay {
+        background-color: #e391b1;
+        height: 24rem;
+        top: 0rem;
+    }
+
+    #postmodernisme .text_overlay {
+        margin-top: 2.5rem;
+    }
+
+
+    #video .overlay {
+        background-color: #3a80af;
+        height: 25rem;
+        top: 0rem;
+    }
+
+    #video .text_overlay {
+        margin-top: 2.5rem;
+    }
+
+    #redesign .overlay {
+        background-color: #626161;
+        height: 25rem;
+        top: 0rem;
+    }
+
+    #redesign .text_overlay {
+        margin-top: 2.5rem;
+    }
+
+    #bibliotekaren .overlay {
+        background-color: #2d877d;
+        height: 25rem;
+        top: 0rem;
+    }
+
+    #bibliotekaren .text_overlay {
+        margin-top: 2.5rem;
+    }
+
+    #sexogsamfund .overlay {
+        background-color: #d7721b;
+        height: 25rem;
+        top: 0rem;
+    }
+
+    #sexogsamfund .text_overlay {
+        margin-top: 2.5rem;
+    }
+
+    #prototype .overlay {
+        background-color: #4e4150;
+        height: 27rem;
+        top: 0rem;
+    }
+
+    #prototype .text_overlay {
+        margin-top: 4.5rem;
+    }
+
+
+}
+
+
+
+/*********KONTAKT SIDEN **************/
+
+
+#kontakt {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4rem;
+}
+
+.image {
+    width: 100%;
+    margin: 0;
+}
+
+#kontakt .row {
+    flex-direction: column;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+}
+
+#kontakt .column1,
+.column3,
+.column5 {
+    flex-grow: 1;
+    flex-basis: 50px;
+    padding-top: 2rem;
+}
+
+#kontakt .column2,
+.column4,
+.column6 {
+    flex-grow: 1;
+    flex-basis: 50px;
+    padding-bottom: 1.2rem;
+}
+
+#kontakt img {
+    width: 5rem;
+}
+
+/**kontakt desctop**/
+
+@media only screen and (min-width: 500px) {
+    #kontakt {
+        padding-top: 8rem;
+        padding-bottom: 5rem;
+    }
+
+    #kontakt .row {
+        flex-direction: row;
+        flex-basis: 150px;
+        justify-content: center;
+        align-items: center;
+        width: 400px;
+        margin-left: 6rem;
+    }
+
+    #kontakt .column1,
+    .column3,
+    .column5 {
+        flex-grow: 1;
+        flex-basis: 50px;
+        padding: 0rem;
+        padding-top: 0rem;
+    }
+
+    #kontakt .column2,
+    .column4,
+    .column6 {
+        flex-grow: 2;
+        flex-basis: 50px;
+        padding: 0rem;
+    }
+}
+
+/***********OM SIDEN********/
+
+#om {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(227, 227, 227);
+}
+
+#om .row,
+.row_reverse {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+
+#om .column1,
+.column1_top {
+    flex-grow: 1;
+    flex-basis: 300px;
+}
+
+
+#om .column2,
+.column2_top {
+    flex-grow: 1;
+    flex-basis: 300px;
+    background-color: rgb(227, 227, 227);
+    padding: 1.5rem;
+}
+
+
+#om .column2 {
+    height: 25rem;
+}
+
+/****OM tablet***/
+
+@media only screen and (min-width: 600px) {
+
+    #om .column2 {
+        height: 19rem;
+    }
+
+    #om .column1_top {
+        margin-top: 3rem;
+    }
+
+    #om .column2_top {
+        padding-top: 3rem;
+    }
+
+    #om p {
+        font-size: 0.8rem;
+    }
+
+}
+
+@media only screen and (min-width: 700px) {
+
+    #om .column2 {
+        height: 24rem;
+    }
+
+    #om .column1_top {
+        margin-top: 3rem;
+    }
+
+    #om .column2_top {
+        padding-top: 3rem;
+    }
+
+    #om p {
+        font-size: 1.1rem;
+    }
+
+}
+
+/****OM DESCTOP***/
+
+@media only screen and (min-width: 755px) {
+    #om .column2_top {
+        padding-top: 5rem;
+    }
+
+    #om p {
+        font-size: 1.1rem;
+        line-height: 1.4;
+    }
+
+}
+
+/*OM mobil reverse funktionen*/
+@media only screen and (max-width: 600px) {
+    #om .row_reverse {
+        display: flex;
+        flex-wrap: wrap-reverse;
+        flex-direction: row;
+    }
+
+}
